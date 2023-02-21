@@ -24,7 +24,7 @@ export default function About() {
       <Task task={exampleTask} />
       <div>
         <h3>Task with reminder</h3>
-        <p>the green line indicates the remainder for that task is activated</p>
+        <p>the green line indicates the reminder for that task is activated</p>
       </div>
       <Task task={{ ...exampleTask, reminder: !exampleTask.reminder }} />
 
