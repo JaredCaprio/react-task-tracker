@@ -88,18 +88,18 @@ export default function App() {
 
   return (
     <div className="container">
-      <Header
-        text={addForm ? "Close" : "Add"}
-        color={addForm ? "darkred" : "darkgreen"}
-        title="Task Tracker"
-        toggleAdd={() => setAddForm(!addForm)}
-      />
       <Routes>
         <Route
           path="/"
           exact
           element={
             <>
+              <Header
+                text={addForm ? "Close" : "Add"}
+                color={addForm ? "darkred" : "darkgreen"}
+                title="Task Tracker"
+                toggleAdd={() => setAddForm(!addForm)}
+              />
               {addForm && <AddTask onAdd={addTask} />}
               {isLoading && <CardSkeleton cards={3} />}
               {tasks.length > 0 && (
